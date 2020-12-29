@@ -2,7 +2,7 @@
 
 This project includes a sample draggable web-component using LitElement with JavaScript.
 
-![alt text](https://github.com/rayanaradha/Draggable-web-component/blob/master/image/Screenshot%20from%202020-12-29%2002-30-33.png)
+![alt text](https://github.com/rayanaradha/Draggable-web-component/blob/master/image/Draggable-component.png)
 
 
 To serve the site locally, run:
