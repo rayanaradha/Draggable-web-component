@@ -6,7 +6,7 @@ class DragContainer extends LitElement {
   static get styles() {
 
     return css`
-      :host {
+      :host,.drag-test{
         display: block;
         height :100%;
         background-color: #f0f0f0;
@@ -30,6 +30,7 @@ class DragContainer extends LitElement {
 
      .vertical-container {
       width:220px;
+     
       }
 
 
@@ -97,30 +98,34 @@ class DragContainer extends LitElement {
 
   drop(e) {    
       const dropzone = e.target;
-      console.log(dropzone);
-      dropzone.appendChild(this.categories);
-      
+      if(this.categories.isAllowdToDrag=="false"){
+         alert("Not allowed to change");
+      }   
+      else if(dropzone.tagName!="DRAG-TEST-ON"){
+         dropzone.appendChild(this.categories);
+      }   
+
   }
 
   
   render() {
+  
     return html`
     <div class="drag-test" @drop=${this.drop} @dragover=${this.allowDrop}>
       <div class="board-column-header">${this.headerName}</div>
 
-      <div class="board-column-label"> + new element </div>
 
       ${ (this.isVerticle=="true")? 
            html ` 
               <div class="vertical-container">
                       ${this.tests.map(item => html`
-                      <drag-test-on id="${item}"  draggable="true" @dragstart=${this.hitTest} TestName="${item}"></drag-test-on>`)}
+                      <drag-test-on  draggable="true" @dragstart=${this.hitTest} containerName=${this.headerName} testName="${item[0]}" isAllowdToDrag="${item[1]}" ></drag-test-on>`)}
                   
               </div>`
            :html `
               <div class="horizontal-container">
                       ${this.tests.map(item => html`
-                      <drag-test-on id="${item}"  draggable="true" @dragstart=${this.hitTest} TestName="${item}"></drag-test-on>`)}  
+                      <drag-test-on  draggable="true" @dragstart=${this.hitTest} containerName=${this.headerName} testName="${item[0]}" isAllowdToDrag="${item[1]}" ></drag-test-on>`)}  
               </div>`}    
       </div>
     </div>`;

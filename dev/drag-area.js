@@ -39,10 +39,10 @@ class DragArea extends LitElement {
 
     static get properties(){
         return{
-            testInTable11 : { type: Array},
-            testInTable12 : { type: Array},
-            testInTable13 : { type: Array},
-            testInTable14 : { type: Array},
+            testInTable11 : { type: Object},
+            testInTable12 : { type: Object},
+            testInTable13 : { type: Object},
+            testInTable14 : { type: Object},
             testInTable15 : { type: Array},
             categories: {type: Object},
 
@@ -52,11 +52,11 @@ class DragArea extends LitElement {
 
     constructor(){
         super();
-        this.testInTable1=["Test1","Test2","Test3","Test4"];
-        this.testInTable2=["Test5","Test6","Test7","Test8"];
-        this.testInTable3=["Test9","Test10","Test11","Test12"];
-        this.testInTable4=["Test13","Test14"];
-        this.testInTable5=["Test15","Test16"];
+        this.testInTable1=[["Test1-allowed","true"],["Test2-allowed","true"],["Test3","false"],["Test4","false"]];
+        this.testInTable2=[["Test4-allowed","true"],["Test5-allowed","true"],["Test6","false"],["Test7","false"]];
+        this.testInTable3=[["Test1-allowed","true"],["Test2-allowed","true"],["Test3","false"],["Test8","false"]];
+        this.testInTable4=[["Test9-allowed","true"],["Test10","false"]];
+        this.testInTable5=[["Test11-allowed","true"],["Test12","false"]];
         
     }    
 
