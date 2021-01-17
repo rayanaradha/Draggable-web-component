@@ -7,7 +7,7 @@ class DragTestOnElement extends LitElement {
             width: 120px;
             height: 20px;
             display: block;
-            margin: 30px 30px 30px 35px;
+            margin: 20px 30px 20px 35px;
             position: relative;
             padding: 13px;
             background: #fff;
@@ -23,13 +23,13 @@ class DragTestOnElement extends LitElement {
       return {
         TestName: { type: String },
         containerName: { type: String },
-        isAllowdToDrag: { type: String }
+        isAllowdToDrag: { type: Boolean }
       }  
   }  
   
   render() {
       return html`
-          <div class="box">${this.TestName}</div>
+          <div class="box">${this.TestName} </div>
       `;
     }
 }
