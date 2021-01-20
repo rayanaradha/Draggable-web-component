@@ -59,7 +59,7 @@ class DragArea extends LitElement {
         this.testInTable3=[["Test9-allowed",true],["Test10-allowed",true],["Test11",false],["Test12",false]];
         this.testInTable4=[["Test13-allowed",true],["Test14",false]];
         this.testInTable5=[["Test15-allowed",true],["Test16",false]];
-        this.verticalTable1Headers=[["Table 01 - vertical",this.testInTable1],["Table 02 - vertical",this.testInTable2],["Table 03 - vertical",this.testInTable3]];
+        this.verticalTable1Headers=[["Table 01 -vertical",this.testInTable1],["Table 02 - vertical",this.testInTable2],["Table 03 - vertical",this.testInTable3]];
         this.horizontalTable1Headers=[["Table 01 - horizontal",this.testInTable4],["Table 02 - horizontal",this.testInTable5]];
        
         

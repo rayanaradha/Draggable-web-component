@@ -4,15 +4,15 @@ class DragTestOnElement extends LitElement {
   static get styles() {
     return css`
         :host {
-            width: 120px;
+            width: 110px;
             height: 20px;
             display: block;
-            margin: 20px 30px 20px 35px;
+            margin: 10px 20px;
             position: relative;
             padding: 13px;
             background: #fff;
             border-radius: 4px;
-            font-size: 17px;
+            font-size: 15px;
             cursor: pointer;
         }
       
